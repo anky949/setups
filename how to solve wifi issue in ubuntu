@@ -1,0 +1,11 @@
+run cmd:
+rfkill unblock all
+
+run cmd:
+systemctl restart network-manager.service 
+
+
+then restart the computer
+
+
+

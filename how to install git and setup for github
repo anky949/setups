@@ -1,0 +1,88 @@
+
+ankit@ankit:~$ sudo apt-get install git
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  libllvm4.0 linux-headers-4.10.0-28 linux-headers-4.10.0-28-generic linux-image-4.10.0-28-generic linux-image-extra-4.10.0-28-generic
+Use 'sudo apt autoremove' to remove them.
+Suggested packages:
+  git-daemon-run | git-daemon-sysvinit git-doc git-el git-email git-gui gitk gitweb git-arch git-cvs git-mediawiki git-svn
+The following NEW packages will be installed:
+  git
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 0 B/3,102 kB of archives.
+After this operation, 24.1 MB of additional disk space will be used.
+Selecting previously unselected package git.
+(Reading database ... 249227 files and directories currently installed.)
+Preparing to unpack .../git_1%3a2.7.4-0ubuntu1.3_amd64.deb ...
+Unpacking git (1:2.7.4-0ubuntu1.3) ...
+Setting up git (1:2.7.4-0ubuntu1.3) ...
+
+ankit@ankit:~$ git config --global user.email "gupta.ankit949@gmail.com"
+
+ankit@ankit:~$ git config --global user.name "anky949"
+
+ankit@ankit:~$ ls -la /home/ankit/.ssh/
+total 12
+drwx------  2 ankit ankit 4096 Mar 25 15:06 .
+drwxr-xr-x 26 ankit ankit 4096 Mar 25 15:12 ..
+-rw-r--r--  1 ankit ankit  884 Mar  5 23:04 known_hosts
+
+ankit@ankit:~$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/ankit/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/ankit/.ssh/id_rsa.
+Your public key has been saved in /home/ankit/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:Ovqll1G8qyHtcEGU4Lle7QLfE3mU4QboJIXs5AJyIdQ ankit@ankit
+The key's randomart image is:
++---[RSA 2048]----+
+|o.o. ..+oo. .    |
+|..oE .=o+  o o   |
+| o . +o+..  =    |
+|    . oo..o+     |
+|     .o S.+..    |
+|     . *.+.o     |
+|      * Bo+.     |
+|     . Ooo..     |
+|    ..o.o.       |
++----[SHA256]-----+
+
+ankit@ankit:~$ ls -la /home/ankit/.ssh/
+total 20
+drwx------  2 ankit ankit 4096 Mar 25 15:13 .
+drwxr-xr-x 26 ankit ankit 4096 Mar 25 15:12 ..
+-rw-------  1 ankit ankit 1675 Mar 25 15:13 id_rsa
+-rw-r--r--  1 ankit ankit  393 Mar 25 15:13 id_rsa.pub
+-rw-r--r--  1 ankit ankit  884 Mar  5 23:04 known_hosts
+
+ankit@ankit:~$ gedit /home/ankit/.ssh/id_rsa.pub 
+
+//copy the key and paste on the github account
+
+ankit@ankit:~$ 
+ankit@ankit:~$ 
+ankit@ankit:~$ 
+ankit@ankit:~$ cd Documents/
+ankit@ankit:~/Documents$ git init
+Reinitialized existing Git repository in /home/ankit/Documents/.git/
+ankit@ankit:~/Documents$ git add *
+ankit@ankit:~/Documents$ git commit -m"commit1"
+[master (root-commit) 94e2d6c] commit1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 abc
+ankit@ankit:~/Documents$ git remote add origin git@github.com:anky949/test.git
+ankit@ankit:~/Documents$ git remote --v
+origin	git@github.com:anky949/test.git (fetch)
+origin	git@github.com:anky949/test.git (push)
+ankit@ankit:~/Documents$ git push origin master
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 215 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To git@github.com:anky949/test.git
+ * [new branch]      master -> master
+ankit@ankit:~/Documents$ 
+

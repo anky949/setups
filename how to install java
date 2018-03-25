@@ -1,0 +1,27 @@
+sudo add-apt-repository ppa:webupd8team/java
+
+sudo apt-get update
+
+sudo apt-get install oracle-java8-installer
+
+//check java version
+javac -version
+
+//then set environment variable in environment file which located in etc folder
+
+//open environment file
+sudo gedit /etc/environment
+
+paste the following line:
+JAVA_HOME="/usr/lib/jvm/java-8-oracle"
+
+then go back to terminal
+
+run cmd to execute file:
+source /etc/environment
+
+run following cmd to check environment is set or not:
+echo $JAVA_HOME
+
+output:
+/usr/lib/jvm/java-8-oracle

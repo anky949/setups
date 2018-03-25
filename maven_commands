@@ -1,0 +1,3 @@
+how to run maven project on tomcat specific port
+
+cmd: mvn clean install tomcat7:run -Dspring.profiles.active=dev -Dmaven.tomcat.port=7050

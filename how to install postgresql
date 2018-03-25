@@ -1,0 +1,14 @@
+Step 3: In Linux: open the terminal and run this command("sudo apt-get install postgresql") for "postgresql".
+
+Step 4: After installation enter these commands 
+-> sudo passwd postgres
+-> enter password as "postgres"
+-> sudo su - postgres
+-> psql -d template1 -c "ALTER USER postgres WITH PASSWORD 'postgres';"
+-> createdb motus
+-> psql motus
+-> grant all privileges on database motus to postgres;
+
+
+Step 7: For postrgreSQL Tool -> sudo apt-get install pgadmin3.
+
